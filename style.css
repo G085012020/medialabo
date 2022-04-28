@@ -1,3 +1,5 @@
-h1{
+header{
     background-color:bisque;
+    height: 3em;
+    padding: 2em;
 }
