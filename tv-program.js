@@ -80,6 +80,6 @@ let data = {
 };
 
 /////////////////// 課題3-2 はここから書き始めよう
-for(let d of data){
+for(d of data.list.g1){
   console.log(d.title);
 }
