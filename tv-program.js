@@ -80,6 +80,14 @@ let data = {
 };
 
 /////////////////// 課題3-2 はここから書き始めよう
+console.log(data.list.g1.length);
 for(d of data.list.g1){
-  console.log(d.title);
+  console.log(d.title+"/"+d.start_time+"/"+d.end_time);
+  let t = document.querySelector('span#title');
+    t.textContent=d.title;
+  let s = document.querySelector('span#start');
+    s.textContent=d.start_time;
+  let e = document.querySelector('span#end');
+    e.textContent=d.end_time;
 }
+

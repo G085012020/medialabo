@@ -8,27 +8,34 @@ let kaisu = 0;
 // 予想を4回実行する
 // 将来: ボタンを押したら， hantei() を呼び出すように修正する
 hantei();
+/*hantei();
 hantei();
-hantei();
-hantei();
+hantei();*/
 
 // ボタンを押した後の処理をする関数 hantei() の定義
 function hantei() {
     let yoso = 4;       // 第5回課題:テキストボックスの数値をここに代入
-    console.log(kaisu+1+"回目の予想:"+yoso);
+    let k = document.querySelector('span#kaisu');
+    k.textContent=kaisu+1;
+    let y = document.querySelector('span#yoso');
+    y.textContent=yoso;
     if(kaisu>=3 ){
-        console.log("答えは"+kotae+"でした.すでにゲームは終わっています");
+        let h=document.querySelector("div#hentou");
+        h.textContent=("答えは"+kotae+"でした.すでにゲームは終わっています");
     }
     else if(kotae===yoso){
-        console.log("正解です.おめでとう!");
+        let h=document.querySelector("div#hentou");
+        h.textContent=("正解です.おめでとう!");
         kaisu=kaisu+1;
     }
     else if(kotae<yoso){
-        console.log("まちがい.答えはもっと小さいですよ");
+        let h=document.querySelector("div#hentou");
+        h.textContent=("まちがい.答えはもっと小さいですよ");
         kaisu=kaisu+1;
     }
     else if(kotae>yoso){
-        console.log("まちがい.答えはもっと大きいですよ");
+        let h=document.querySelector("div#hentou");
+        h.textContent=("まちがい.答えはもっと大きいですよ");
         kaisu=kaisu+1;
     }
     // 課題3-1：ここの判定処理を作成する．
