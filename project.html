@@ -12,14 +12,47 @@
 
     <header><h1>My projects</h1></header>
 
-    <p>Welcome to my project page, showing what exciting things I am currently doing.</p>
+    
 
-    <form method="post">
-      <label>検索キー:
-        <input name="submitted-name" autocomplete="name">
-      </label>
-      <button>検索</button>
-    </form>
+    <input type="radio" name="service" id="g1">
+    <label for="g1">NHK総合</label>
+    <input type="radio" name="service" id="e1">
+    <label for="e1">Eテレ</label>
+    
+    <div>
+      <input type="checkbox" name="genres" id="news">
+      <label for="news">ニュース・報道</label>
+      <input type="checkbox" name="genres" id="sports">
+      <label for="sports">スポーツ</label>
+      <input type="checkbox" name="genres" id="wshow">
+      <label for="wshow">情報・ワイドショー</label>
+    </div>
+    <div>
+      <input type="checkbox" name="genres" id="drama">
+      <label for="drama">ドラマ</label>
+      <input type="checkbox" name="genres" id="variety">
+      <label for="variety">バラエティ</label>
+      <input type="checkbox" name="genres" id="movie">
+      <label for="movie">映画</label>
+    </div>
+    <div>
+      <input type="checkbox" name="genres" id="anime">
+      <label for="anime">アニメ</label>
+      <input type="checkbox" name="genres" id="documentary">
+      <label for="documentary">ドキュメンタリー・教養</label>
+      <input type="checkbox" name="genres" id="performance">
+      <label for="performance">劇場・公演</label>
+    </div>
+    <div>
+      <input type="checkbox" name="genres" id="education">
+      <label for="education">趣味・教育</label>
+      <input type="checkbox" name="genres" id="welfare">
+      <label for="welfare">福祉</label>
+    </div>
+    <div>
+      <button id="kensaku">検索</button>
+    </div>
+    <div>
     <table>
       <tr>
         <th>番組名</th>
@@ -32,5 +65,6 @@
         <td><span id="end"></span></td>
       </tr>
     </table>
+    </div>
   </body>
 </html>
