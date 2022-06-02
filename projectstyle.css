@@ -5,13 +5,13 @@ header{
     border-bottom:solid black 1px;
 }
 table{
-    background-color:aliceblue
+    background-color:aliceblue;
+    table-layout: fixed;
+    width: 775px;
+    height: 2em;
+    text-align: center;
 }
-table{
-    width: 300px;
-    height: 25px;
-}
-header,table{
+header{
     text-align: center;
 }
 td,th{

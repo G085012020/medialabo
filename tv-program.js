@@ -39,7 +39,7 @@ function showResult(resp) {
 
 	// data をコンソールに出力
 	console.log(data);
-
+//表
   let service=document.querySelectorAll('input[name="service"]');
   let key1;
   for(let s of service){
@@ -52,37 +52,42 @@ function showResult(resp) {
   let table = document.querySelector('div#placeholder')
   
 
-
-
   if(key1=="g1"){
     for(let i=0;i<data.list.g1.length;i++){
+      
       let title = document.createElement('th');
-      title.setAttribute('src', data.list.g1[i].title);
+      title.textContent=data.list.g1[i].title;
       let start = document.createElement('th');
-      start.setAttribute('src', data.list.g1[i].start_time);
+      start.textContent=data.list.g1[i].start_time;
       let end = document.createElement('th');
-      end.setAttribute('src', data.list.g1[i].end_time);
-    
+      end.textContent=data.list.g1[i].end_time;
 
-    // まとめた div 要素
       let d = document.createElement('table');
       d.classList.add('table');
       d.insertAdjacentElement('beforeend', title);
       d.insertAdjacentElement('beforeend', start);
       d.insertAdjacentElement('beforeend', end);
 
-      // d をページに追加
-      table.insertAdjacentElement('afterend', d);
+      table.insertAdjacentElement('afterend',d);
   }
 }
   else if(key1=="e1"){
     for(let i=0;i<data.list.e1.length;i++){
-    let t = document.querySelector('span#title');
-    t.textContent=data.list.e1[i].title;
-    let s = document.querySelector('span#start');
-    s.textContent=data.list.e1[i].start_time;
-    let e = document.querySelector('span#end');
-    e.textContent=data.list.e1[i].end_time;
+      
+      let title = document.createElement('th');
+      title.textContent=data.list.e1[i].title;
+      let start = document.createElement('th');
+      start.textContent=data.list.e1[i].start_time;
+      let end = document.createElement('th');
+      end.textContent=data.list.e1[i].end_time;
+
+      let d = document.createElement('table');
+      d.classList.add('table');
+      d.insertAdjacentElement('beforeend', title);
+      d.insertAdjacentElement('beforeend', start);
+      d.insertAdjacentElement('beforeend', end);
+
+      table.insertAdjacentElement('afterend', d);
   }
 }
 }
