@@ -7,6 +7,10 @@ header{
 table{
     background-color:aliceblue
 }
+table{
+    width: 300px;
+    height: 25px;
+}
 header,table{
     text-align: center;
 }
