@@ -5,7 +5,7 @@ header{
     border-bottom:solid black 1px;
 }
 table{
-    background-color:aliceblue;
+    background-color:rgb(200, 255, 225);
     table-layout: fixed;
     width: 775px;
     height: 2em;

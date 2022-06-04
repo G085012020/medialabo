@@ -3,6 +3,7 @@ b.addEventListener('click', kensaku);
 
 // 通信を開始する処理
 function kensaku() {
+  
 	// URL を設定
   let service=document.querySelectorAll('input[name="service"]');
   let key1;
@@ -11,6 +12,7 @@ function kensaku() {
       key1=s.value;
     }
   }
+  let table = document.querySelector('div#placeholder')
   let genres=document.querySelectorAll('input[name="genres"]');
   let key2;
   for(let g of genres){
@@ -57,16 +59,16 @@ function showResult(resp) {
       
       let title = document.createElement('th');
       title.textContent=data.list.g1[i].title;
-      let start = document.createElement('th');
-      start.textContent=data.list.g1[i].start_time;
-      let end = document.createElement('th');
-      end.textContent=data.list.g1[i].end_time;
+      let subtitle = document.createElement('th');
+      subtitle.textContent=data.list.g1[i].subtitle;
+      let content = document.createElement('th');
+      content.textContent=data.list.g1[i].content;
 
       let d = document.createElement('table');
       d.classList.add('table');
       d.insertAdjacentElement('beforeend', title);
-      d.insertAdjacentElement('beforeend', start);
-      d.insertAdjacentElement('beforeend', end);
+      d.insertAdjacentElement('beforeend', subtitle);
+      d.insertAdjacentElement('beforeend', content);
 
       table.insertAdjacentElement('afterend',d);
   }
@@ -76,16 +78,16 @@ function showResult(resp) {
       
       let title = document.createElement('th');
       title.textContent=data.list.e1[i].title;
-      let start = document.createElement('th');
-      start.textContent=data.list.e1[i].start_time;
-      let end = document.createElement('th');
-      end.textContent=data.list.e1[i].end_time;
+      let subtitle = document.createElement('th');
+      subtitle.textContent=data.list.e1[i].subtitle;
+      let content = document.createElement('th');
+      content.textContent=data.list.e1[i].content;
 
       let d = document.createElement('table');
       d.classList.add('table');
       d.insertAdjacentElement('beforeend', title);
-      d.insertAdjacentElement('beforeend', start);
-      d.insertAdjacentElement('beforeend', end);
+      d.insertAdjacentElement('beforeend', subtitle);
+      d.insertAdjacentElement('beforeend', content);
 
       table.insertAdjacentElement('afterend', d);
   }
@@ -94,6 +96,21 @@ function showResult(resp) {
 // 通信エラーが発生した時の処理
 function showError(err) {
 	console.log(err);
+  let table = document.querySelector('div#placeholder')
+  let title = document.createElement('th');
+  title.textContent="検索結果がありませんでした";
+  let subtitle = document.createElement('th');
+  subtitle.textContent="検索結果がありませんでした";
+  let content = document.createElement('th');
+  content.textContent="検索結果がありませんでした";
+
+  let d = document.createElement('table');
+  d.classList.add('table');
+  d.insertAdjacentElement('beforeend', title);
+  d.insertAdjacentElement('beforeend', subtitle);
+  d.insertAdjacentElement('beforeend', content);
+
+  table.insertAdjacentElement('afterend', d);
 }	
 
 // 通信の最後にいつも実行する処理
